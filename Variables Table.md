@@ -1,6 +1,6 @@
-|Variables Table||||||
+|**Variables Table**||||||
 |---|---|---|---|---|---|
-|Variable Name|Role|Type|Description|Units|Missing Values|
+|**Variable Name**|**Role**|**Type**|**Description**|**Units**|**Missing Values**|
 |holiday|Feature|Categorical|US National holidays plus regional holiday Minnesota State Fair| ||no|
 |temp|Feature|Continuous|Average temp in kelvin|Kelvin|no|
 |rain_1h|Feature|Continuous|Amount in mm of rain that occurred in the hour|mm|no|
@@ -32,7 +32,7 @@
 
 Other types of dataset that exists are Sptial Dataset (features observed across various regions, locations), Image dataset (digial or visual data stored in matrix format), Text Dataset (textual data or document, such as cutsomer reivews).
 
-**Role of a variable"**
+**Role of a variable**
 
 - **Feaute** is indepdent variable (input varible or predictor).These are used to make predictions or model relationships
 

@@ -5,6 +5,7 @@ import pandas as pd
 # Create reference to CSV file
 #csv_path = "../Resources/Metro_Interstate_Traffic_Volume.csv"
 csv_path = "Metro_Interstate_Traffic_Volume.csv"
+
 # Import the CSV into a pandas DataFrame
 Traffic_Volume_df = pd.read_csv(csv_path)
 
@@ -33,7 +34,8 @@ print (Traffic_Volume_df.dtypes)
 #Traffic_Volume_df = pd.to_datetime(Traffic_Volume_df['date_time'])
 for index, row in Traffic_Volume_df.iterrows():
     #if no18bede6c-af04-4dd8-9eb7-a4f8d1cda498t pd.isnull(row['holiday']):
-    if row['holiday'] !='None':
+    #if  row['holiday'] !='None':
+    if pd.notna(row['holiday']):
         holiday_value = row['holiday']
 
         for i in range (1,50):

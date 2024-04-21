@@ -8,14 +8,14 @@
 **What is Data Exploration**
  The data exploration is done to get undatandating / insight about the selected data
     
-    Typical steps involved are
+- Typical steps involved are
     Understanding of varables of the dataset, number of rows, columns, datatypes.
 
-    Identifing misssing values, duplicates, outliers and hanlding them.
+- Identifing misssing values, duplicates, outliers and hanlding them.
 
-    Understaing of Centeral tendency(Statisctics), Mean, Mode, Median and dispersion, distribution.
+- Understaing of Centeral tendency(Statisctics), Mean, Mode, Median and dispersion, distribution.
     
-    Idetifying pattern, trends and relationships in data through visulization techniques such as histograms, scatter plots and heatmaps.
+- Idetifying pattern, trends and relationships in data through visulization techniques such as histograms, scatter plots and heatmaps.
 
 |**Variables Table**||||||
 |---|---|---|---|---|---|
@@ -27,7 +27,7 @@
 |clouds_all|Feature|Integer|Percentage of cloud cover|%|no|
 |weather_main|Feature|Categorical|Short textual description of the current weather||no|
 |weather_description|Feature|Categorical|Longer textual description of the current weather||no|
-|date_time|Feature|Date|Hour of the data collected in local CST time||no|
+|date_time|Feature|Date|Hour of the data collected in local CST time||Yes|
 |traffic_volume|Target|Integer|Hourly I-94 ATR 301 reported westbound traffic volume||no|
 
 **Variable Types :**
@@ -63,26 +63,34 @@ Other types of dataset that exists are Sptial Dataset (features observed across 
 Central tendency is defined as “the statistical measure that identifies a single value as representative of an entire distribution. It aims to provide an accurate description of the entire data. It is the single value that is most typical/representative of the collected data. 
 It lets us know what is normal or 'average' for a set of data. It also condenses the data set down to one representative value, which is useful when you are working with large amounts of data.
 
-**Mode**: The mode is the most frequently occurring value in the dataset
+- **Mode**: The mode is the most frequently occurring value in the dataset
 
-**Median** : The median of a dataset is the value that’s exactly in the middle when it is ordered from low to high.
+- **Median** : The median of a dataset is the value that’s exactly in the middle when it is ordered from low to high.
 
-**Median of an odd-numbered dataset**
+- **Median of an odd-numbered dataset**
 For an odd-numbered dataset, find the value that lies at the (n+1)/2 position, where n is the number of values in the dataset.
 
-**Median of an even-numbered dataset**
+- **Median of an even-numbered dataset**
 For an even-numbered dataset, find the two values in the middle of the dataset: the values at the n/2 and n/2+1 positions. Then, find their mean.
+
+- **Mean**
+ The arithmetic mean of a dataset (which is different from the geometric mean) is the sum of all values divided by the total number of values.
+
+- **Distribution**
+If the mean is approximately equal to the median, the distributionis symmetrical
+if the mean is greater than the median, the distributino is positively skewed.
+If the mean is less that the media, the distribution is negative skewed.
 
 **Measures of Dispersion**
 
-**Range** is difference between largest and smallest values in dataset. Range provides quick indication of variablity or spread of data points. It is sensitive to outliers.
+- **Range** is difference between largest and smallest values in dataset. Range provides quick indication of variablity or spread of data points. It is sensitive to outliers.
 
 
-**Variance** is the average  of squared differences from the mean Variance is measure of spread of data points around the mean. Ahigher varaince indicates that the data points are more spread around the mean, while lower vairance suggests that the data points are closer to mean.
+- **Variance** is the average  of squared differences from the mean Variance is measure of spread of data points around the mean. Ahigher varaince indicates that the data points are more spread around the mean, while lower vairance suggests that the data points are closer to mean.
 
-**Stanard Deviation** is square root of variance. A higher Std. Dev. indicates greater vairablity in dataset,  a lower std. dev. suggests that data points are closer to mean.
+- **Stanard Deviation** is square root of variance. A higher Std. Dev. indicates greater vairablity in dataset,  a lower std. dev. suggests that data points are closer to mean.
 
-**Interquartile Range (IQR)** IT is a measure of statistical dispersion (spred of data set)
+- **Interquartile Range (IQR)** IT is a measure of statistical dispersion (spred of data set)
 IQR  = Q3 -Q1
 
     The first quartile (Q1) - It represents 25th percentile of the data.
@@ -90,10 +98,11 @@ IQR  = Q3 -Q1
     The third quartile (Q3) - It represents 75th percentile of the data.
 IQR is amount of spread in the middle 50% of dataset. It is robust against outliers.
 
-This dataset shows that there is high degree of variablity or scatter of data points around the mean
+    **This dataset shows that there is high degree of variablity or scatter of data points around the mean**
 
 **Indtentifaction and Handling of missing data**
-1. **Missing Holidays** Holiday valus are present only at 00:00 hour of the date, missing at other hours for the date.
+1. **Missing Holidays :** 
+Holiday values are present only at 00:00 hour of the date, missing at other hours for the date.
 For example,
 
 | holiday      | date_time       | traffic_volume |
@@ -293,14 +302,16 @@ For example:
 | None    | 298.02 | 0       | 0       | 40         | Clouds       | scattered clouds    | 9/21/2017 22:00 | 2423           |
 | None    | 297.75 | 0       | 0       | 1          | Clear        | sky is clear        | 9/21/2017 23:00 | 1293           |
 
-**Pros and Cons of manufacturing to fill in missing data**
--- **Pros** Completeness, Preserves structure
--- **Cons** Not real data, leading to bias, Incorrect results.
+**Pros and Cons of manufacturing data to fill in missing data**
 
-We are not using manufactured data for this assignment.
+- **Pros** Completeness, Preserves structure
+
+- **Cons** Not real data, leading to bias, Incorrect results.
+
+**We have decided not use manufactured data for this assignment**
 
 **Remove duplicates for date_time**
-IF date_time and traffic_volume combiation is same, it is considered as duplicate for this assignment.
+If date_time and traffic_volume combiation is same, it is considered as duplicate for this assignment.
 
 | holiday | temp   | rain_1h | snow_1h | clouds_all | weather_main | weather_description     | date_time        | traffic_volume |
 |---------|--------|---------|---------|------------|--------------|-------------------------|------------------|----------------|

@@ -241,7 +241,7 @@ data created for missing dates
 
 data ={
     'holiday':  ['None']*len(missing_dates),
-    'temp': [294.0]*len(missing_dates),
+    'temp': [59.0]*len(missing_dates),
     'rain_1h':[0.0]*len(missing_dates),
     'snow_1h':[0.0]*len(missing_dates),
     'clouds_all': [50]*len(missing_dates),
@@ -301,6 +301,9 @@ For example:
 | None    | 298.55 | 0       | 0       | 75         | Clouds       | broken clouds       | 9/21/2017 21:00 | 3936           |
 | None    | 298.02 | 0       | 0       | 40         | Clouds       | scattered clouds    | 9/21/2017 22:00 | 2423           |
 | None    | 297.75 | 0       | 0       | 1          | Clear        | sky is clear        | 9/21/2017 23:00 | 1293           |
+
+For python code, refer "Missing date sequence.py" python program.
+Need do data cleanup again for this file.
 
 **Pros and Cons of manufacturing data to fill in missing data**
 

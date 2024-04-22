@@ -1,21 +1,20 @@
 
-
-
 **What is data fetching**
-    This involves selecting/acquiring data from various sources like APIs, Databses, JSON file, Excel file, Web Scaraping or CSV file. 
+    This involves selecting/acquiring data from various sources like APIs, Databases, JSON file, Excel file, Web Scraping or CSV file. 
     For this project we have used csv file https://archive.ics.uci.edu/dataset/492/metro+interstate+traffic+volume from UC Irvine Machine Learning Repository
 
 **What is Data Exploration**
- The data exploration is done to get undatandating / insight about the selected data
+ The data exploration is done to get understanding / insight about the selected data
     
 - Typical steps involved are
-    Understanding of varables of the dataset, number of rows, columns, datatypes.
+    Understanding of variables of the dataset, number of rows, columns, datatypes.
 
-- Identifing misssing values, duplicates, outliers and hanlding them.
+- Identifying missing values, duplicates, outliers and handling them.
 
-- Understaing of Centeral tendency(Statisctics), Mean, Mode, Median and dispersion, distribution.
+- Understanding of Central tendency (Statistics), Mean, Mode, Median and dispersion, distribution.
     
-- Idetifying pattern, trends and relationships in data through visulization techniques such as histograms, scatter plots and heatmaps.
+- Identifying pattern, trends and relationships in data through visualization techniques such as histograms, scatter plots and heatmaps.
+
 
 |**Variables Table**||||||
 |---|---|---|---|---|---|
@@ -32,30 +31,30 @@
 
 **Variable Types :**
 
-- **Categorial Variable** : Categorical Variables represent categories or groups. It can take fixed number of possible values to represent qualtative characteristics.
+- **Categorial Variable** : Categorical Variables represent categories or groups. It can take fixed number of possible values to represent qualitative characteristics.
 
-- **Continuous Variable** : Continous Variables are numeric vaiables. These values can be fractional or decimal.
+- **Continuous Variable** : Continuous Variables are numeric variables. These values can be fractional or decimal.
 
 - **Integer Variables** : Integer Variables are numeric. These values can be only integers.
 
-- **Date Variable** : Date vaiable in this context repsents date and time.
+- **Date Variable** : Date variable in this context represents date and time.
 
-**Dataset Characteristics :**
+**Dataset Characteristics:**
     Multivariate, Sequential, Time-Series
 
-- **Multivarate** : A Multivariate dataset contains mutliple variables(features or attributes) for each data points. Each variable (feature or attribute) representing different aspect or characteristics of data.
+- **Multivariate** : A Multivariate dataset contains multiple variables(features or attributes) for each data points. Each variable (feature or attribute) representing different aspect or characteristics of data.
 
-- **Sequential** : A equential dataset consists of data points that are arranged in a specific sequence or time series. Each data point respresents an observation(data point) capatured at time intervals
+- **Sequential** : A sequential dataset consists of data points that are arranged in a specific sequence or time series. Each data point represents an observation(data point) captured at time intervals
 
-- **Time-Series** : A Time Series dataset represents obseravation (data point) collected at equally spaced time intervals.
+- **Time-Series** : A Time Series dataset represents observation (data point) collected at equally spaced time intervals.
 
-Other types of dataset that exists are Sptial Dataset (features observed across various regions, locations), Image dataset (digial or visual data stored in matrix format), Text Dataset (textual data or document, such as cutsomer reivews).
+Other types of dataset that exists are Spatial Dataset (features observed across various regions, locations), Image dataset (digital or visual data stored in matrix format), Text Dataset (textual data or document, such as customer reviews).
 
 **Role of a variable**
 
-- **Feaute** is indepdent variable (input varible or predictor).These are used to make predictions or model relationships
+- **Feature** is intendent variable (input variable or predictor).These are used to make predictions or model relationships
 
-- **Target** is dedependent variable(response variabel or output variable ) that machine learning model seeks to predict or explain.
+- **Target** is dependent variable(response variable or output variable ) that machine learning model seeks to predict or explain.
 
 
 
@@ -77,20 +76,20 @@ For an even-numbered dataset, find the two values in the middle of the dataset: 
  The arithmetic mean of a dataset (which is different from the geometric mean) is the sum of all values divided by the total number of values.
 
 - **Distribution**
-If the mean is approximately equal to the median, the distributionis symmetrical
-if the mean is greater than the median, the distributino is positively skewed.
+If the mean is approximately equal to the median, the distribution is symmetrical
+if the mean is greater than the median, the distribution is positively skewed.
 If the mean is less that the media, the distribution is negative skewed.
 
 **Measures of Dispersion**
 
-- **Range** is difference between largest and smallest values in dataset. Range provides quick indication of variablity or spread of data points. It is sensitive to outliers.
+- **Range** is difference between largest and smallest values in dataset. Range provides quick indication of variability or spread of data points. It is sensitive to outliers.
 
 
-- **Variance** is the average  of squared differences from the mean Variance is measure of spread of data points around the mean. Ahigher varaince indicates that the data points are more spread around the mean, while lower vairance suggests that the data points are closer to mean.
+- **Variance** is the average  of squared differences from the mean Variance is measure of spread of data points around the mean. A higher variance indicates that the data points are more spread around the mean, while lower variance suggests that the data points are closer to mean.
 
-- **Stanard Deviation** is square root of variance. A higher Std. Dev. indicates greater vairablity in dataset,  a lower std. dev. suggests that data points are closer to mean.
+- **Standard Deviation** is square root of variance. A higher Std. Dev. indicates greater variability in dataset,  a lower std. dev. suggests that data points are closer to mean.
 
-- **Interquartile Range (IQR)** IT is a measure of statistical dispersion (spred of data set)
+- **Interquartile Range (IQR)** IT is a measure of statistical dispersion (spread of data set)
 IQR  = Q3 -Q1
 
     The first quartile (Q1) - It represents 25th percentile of the data.
@@ -98,11 +97,12 @@ IQR  = Q3 -Q1
     The third quartile (Q3) - It represents 75th percentile of the data.
 IQR is amount of spread in the middle 50% of dataset. It is robust against outliers.
 
-    **This dataset shows that there is high degree of variablity or scatter of data points around the mean**
+    **This dataset shows that there is high degree of variability or scatter of data points around the mean**
 
-**Indtentifaction and Handling of missing data**
-1. **Missing Holidays :** 
+**Identification and Handling of missing data**
+1. **Missing Holidays:** 
 Holiday values are present only at 00:00 hour of the date, missing at other hours for the date.
+
 For example,
 
 | holiday      | date_time       | traffic_volume |
@@ -303,7 +303,7 @@ For example:
 | None    | 297.75 | 0       | 0       | 1          | Clear        | sky is clear        | 9/21/2017 23:00 | 1293           |
 
 For python code, refer "Missing date sequence.py" python program.
-Need do data cleanup again for this file.
+
 
 **Pros and Cons of manufacturing data to fill in missing data**
 
@@ -311,7 +311,7 @@ Need do data cleanup again for this file.
 
 - **Cons** Not real data, leading to bias, Incorrect results.
 
-**We have decided not use manufactured data for this assignment**
+**We have decided not to use manufactured data for this assignment**
 
 **Remove duplicates for date_time**
 If date_time and traffic_volume combiation is same, it is considered as duplicate for this assignment.
